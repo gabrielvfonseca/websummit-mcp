@@ -14,7 +14,11 @@
     "analyze": "tsx scripts/analyze-har.ts",
     "smoke": "tsx scripts/smoke.ts",
     "test": "vitest",
-    "inspector": "npx @modelcontextprotocol/inspector node dist/index.js"
+    "inspector": "npx @modelcontextprotocol/inspector node dist/index.js",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish",
+    "prepare": "husky"
   },
   "keywords": [
     "mcp",
@@ -34,9 +38,14 @@
     "playwright": "^1.48.0",
     "tsx": "^4.19.0",
     "typescript": "^5.6.0",
-    "vitest": "^2.1.0"
+    "vitest": "^2.1.0",
+    "@changesets/cli": "^2.27.0",
+    "husky": "^9.0.0"
   },
   "engines": {
     "node": ">=20.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
