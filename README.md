@@ -1,4 +1,4 @@
-# websummit-mcp
+# Websummit MCP
 
 An MCP server that reads and writes the **Web Summit Lisbon (lis26)** attendee app
 using your own ticket. It does **not** scrape websummit.com — it drives the same
@@ -102,4 +102,4 @@ npx @modelcontextprotocol/inspector node dist/index.js
 
 ## License
 
-UNLICENSED.
+MIT
