@@ -1,0 +1,4 @@
+{
+  "typescript.preferences.importModuleSpecifier": "node",
+  "editor.formatOnSave": true
+}

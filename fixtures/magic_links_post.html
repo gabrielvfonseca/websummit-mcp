@@ -1,0 +1,49 @@
+  <turbo-stream action="replace" target="login_form"><template><turbo-frame id="login_form">
+  <h1 class="fs-2 text-dark text-center">Check your inbox</h1>
+  <p class="text-center">
+    We've sent an email to <strong>REDACTED</strong> <br> Log in with the authentication url or enter the code below:
+  </p>
+  <div class="bg-white rounded border-solid p-4">
+    <turbo-frame id="login_otp_form" target="_top">
+      <form data-turbo="true" action="/magic_links/verify_otp?slug=lis26" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="REDACTED" />
+        <input type="hidden" name="magic_link_id" id="magic_link_id" value="1795185" />
+        <input type="hidden" name="email" id="email" value="REDACTED" />
+        <input id="otp-code-input"
+               name="otp"
+               autofocus
+               style="letter-spacing: 1rem;"
+               data-controller="otp-input"
+               data-action="paste->otp-input#pasteValue keydown->otp-input#maskInputWithPlaceholder input->otp-input#handleInputForAndroid click->otp-input#moveCursorToEnd"
+               data-otp-input-slug-value="lis26"
+               data-otp-input-email-value="REDACTED"
+               class="form-control p-2 fs-3 text-center text-secondary hide-cursor"
+               required
+               maxlength="6"
+               value="______"
+               type="text"
+               autocomplete="off">
+
+        <input type="submit" name="commit" value="Verify" class="btn btn-gradient rounded-pill w-100 py-3 mt-4" data-disable-with="Verify" />
+</form>    </turbo-frame>
+    <p class="mt-4 text-center text-secondary">
+      Can&#39;t find the email? Try checking the spam folder or   <a href="https://attend.websummit.com/lis26?data%5Bturbo%5D=false&amp;email=REDACTED" id="resend-link"> resend the link </a>
+      <br>
+      Any issue? <a href="https://support.websummit.com/hc"> Contact us</a>
+    </p>
+  </div>
+</turbo-frame>
+</template></turbo-stream>
+<turbo-stream action="update" target="tb-flash"><template>  <div aria-live="polite" aria-atomic="true" class="position-fixed mt-5 me-2 end-0 p-3 toast-wrapper" style="z-index: 1030;">
+        <div class="toast text-bg-success" data-controller="toast" data-bs-delay="6000" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="d-flex align-items-center">
+            <div class="toast-body text-center flex-grow-1">
+              <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+              Authentication email sent successfully.
+            </div>
+            <button type="button" class="close-button btn btn-link text-decoration-none text-white m-auto py-0 ps-0" data-bs-dismiss="toast" aria-label="Close">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+        </div>
+  </div>
+</template></turbo-stream>

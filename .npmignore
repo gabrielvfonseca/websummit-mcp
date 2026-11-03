@@ -1,0 +1,15 @@
+src/
+scripts/
+tests/
+captures/
+docs/
+*.har
+.tsbuildinfo
+.env
+.env.example
+fixtures/
+tsconfig.json
+.vscode/
+.github/
+PLAN.md
+CONTRIBUTING.md

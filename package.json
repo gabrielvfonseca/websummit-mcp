@@ -1,0 +1,42 @@
+{
+  "name": "websummit-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Web Summit Lisbon attendee API",
+  "type": "module",
+  "bin": {
+    "websummit-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "login": "tsx scripts/record.ts",
+    "record": "tsx scripts/record.ts",
+    "analyze": "tsx scripts/analyze-har.ts",
+    "smoke": "tsx scripts/smoke.ts",
+    "test": "vitest",
+    "inspector": "npx @modelcontextprotocol/inspector node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "websummit"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0",
+    "@t3-oss/env-core": "^0.13.11",
+    "node-html-parser": "^9.0.6",
+    "zod": "^3.25.0",
+    "zod-to-json-schema": "^3.25.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "playwright": "^1.48.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
